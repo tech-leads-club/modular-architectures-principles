@@ -1055,7 +1055,55 @@ return legacyCheckoutFlow();
 
 **Referência:** Vernon, V. (2021). *Strategic Monoliths and Microservices: Driving Innovation Using Purposeful Architecture*. Addison-Wesley Signature Series.
 
-### 8.8 Diferenciação deste Trabalho
+### 8.8 Enterprise Monorepo Angular Patterns (Nrwl/Nx Team)
+
+**Contribuição:** Padrões práticos para organização de monorepos em ambientes enterprise, com foco em escalabilidade de times, compartilhamento de código e governança de dependências.
+
+**Relação:** Valida na prática os conceitos de modularização em monorepo apresentados neste trabalho. Demonstra como ferramentas como Nx viabilizam arquiteturas modulares em projetos enterprise de larga escala, com exemplos concretos de estruturação de projetos, bibliotecas e apps.
+
+**Referência:** Nrwl. *Enterprise Monorepo Angular Patterns*. Nrwl Press.
+
+### 8.9 Fundamentals of Software Architecture (Richards & Ford, 2020)
+
+**Contribuição:** Formalização acadêmica de diferentes estilos arquiteturais, incluindo **modular monoliths** como padrão arquitetural válido. Apresenta framework para análise de trade-offs e características arquiteturais.
+
+**Relação:** Fornece base teórica para classificação de arquiteturas modulares como estilo arquitetural distinto. Valida a importância de características como modularidade, deployability e testability que fundamentam nossos 10 princípios.
+
+**Referência:** Richards, M., & Ford, N. (2020). *Fundamentals of Software Architecture: An Engineering Approach*. O'Reilly Media.
+
+### 8.10 Software Architecture: The Hard Parts (Ford, Richards et al., 2021)
+
+**Contribuição:** Análise profunda de trade-offs em arquiteturas distribuídas modernas, questionando quando microsserviços realmente compensam e explorando alternativas como modular monoliths.
+
+**Relação:** Complementa este trabalho ao fornecer metodologia para análise de trade-offs arquiteturais. Reforça a mensagem de que decisões arquiteturais devem ser baseadas em contexto e necessidades reais, não em hype.
+
+**Referência:** Ford, N., Richards, M., Sadalage, P., & Dehghani, Z. (2021). *Software Architecture: The Hard Parts: Modern Trade-Off Analyses for Distributed Architectures*. O'Reilly Media.
+
+### 8.11 Building Evolutionary Architectures (Ford, Parsons, Kua, 2017)
+
+**Contribuição:** Conceito de **fitness functions** e arquiteturas que evoluem incrementalmente ao longo do tempo, suportando mudança constante através de práticas de engenharia.
+
+**Relação:** Fundamenta diretamente a proposta de evolução gradual deste framework. O conceito de fitness functions pode ser aplicado para validar que módulos mantêm seus limites (via enforce-module-boundaries) e que princípios são respeitados ao longo do tempo.
+
+**Referência:** Ford, N., Parsons, R., & Kua, P. (2017). *Building Evolutionary Architectures: Support Constant Change*. O'Reilly Media.
+
+### 8.12 Team Topologies (Skelton & Pais, 2019)
+
+**Contribuição:** Framework para estruturar times de tecnologia com base em fluxo de trabalho, definindo padrões como stream-aligned teams, enabling teams e platform teams.
+
+**Relação:** Essencial para a seção de Governança Organizacional deste trabalho. Arquiteturas modulares se alinham naturalmente com stream-aligned teams, onde cada time possui um ou mais módulos de domínio, com plataforms teams fornecendo módulos de infraestrutura (shared).
+
+**Referência:** Skelton, M., & Pais, M. (2019). *Team Topologies: Organizing Business and Technology Teams for Fast Flow*. IT Revolution Press.
+
+### 8.13 Monolith to Microservices (Newman, 2019)
+
+**Contribuição:** Guia pragmático sobre decomposição de monólitos, reconhecendo que nem todos os sistemas devem se tornar microsserviços e apresentando padrões para transição incremental quando necessário.
+
+**Relação:** Valida a abordagem de evolução gradual proposta neste framework. Newman demonstra que a transição deve ser consciente e incremental, exatamente o que arquiteturas modulares facilitam ao estabelecer fronteiras claras desde o início.
+
+**Referência:** Newman, S. (2019). *Monolith to Microservices: Evolutionary Patterns to Transform Your Monolith*. O'Reilly Media.
+
+### 8.14 Diferenciação deste Trabalho
 
 Este paper vai além ao:
 1. **Formalizar 10 princípios** como framework coeso
@@ -1161,7 +1209,19 @@ Este trabalho é uma **contribuição aberta para a comunidade**. Encorajamos:
 
 11. Vernon, V. (2021). *Strategic Monoliths and Microservices: Driving Innovation Using Purposeful Architecture*. Addison-Wesley Signature Series.
 
-12. Richardson, C. (2018). *Microservices Patterns: With Examples in Java*. Manning Publications.
+12. Nrwl. *Enterprise Monorepo Angular Patterns*. Nrwl Press.
+
+13. Richards, M., & Ford, N. (2020). *Fundamentals of Software Architecture: An Engineering Approach*. O'Reilly Media.
+
+14. Ford, N., Richards, M., Sadalage, P., & Dehghani, Z. (2021). *Software Architecture: The Hard Parts: Modern Trade-Off Analyses for Distributed Architectures*. O'Reilly Media.
+
+15. Ford, N., Parsons, R., & Kua, P. (2017). *Building Evolutionary Architectures: Support Constant Change*. O'Reilly Media.
+
+16. Skelton, M., & Pais, M. (2019). *Team Topologies: Organizing Business and Technology Teams for Fast Flow*. IT Revolution Press.
+
+17. Newman, S. (2019). *Monolith to Microservices: Evolutionary Patterns to Transform Your Monolith*. O'Reilly Media.
+
+18. Richardson, C. (2018). *Microservices Patterns: With Examples in Java*. Manning Publications.
 
 ---
 
@@ -1182,8 +1242,9 @@ Este trabalho é uma **contribuição aberta para a comunidade**. Encorajamos:
 
 **Como citar este trabalho:**
 ```
-Neto, W., & Calderipe, W. (2025). Arquiteturas Modulares: Um Framework de 10 
-Princípios para Sistemas Sustentáveis. TechLeads.club Whitepaper, v1.0.
+Neto, W., & Calderipe, W. (2025). Arquiteturas Modulares: 10 Princípios para 
+Sistemas Escaláveis Além de Monólitos e Microsserviços. TechLeads.club 
+Whitepaper, v1.0.
 ```
 
 ---
