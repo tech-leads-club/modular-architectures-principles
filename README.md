@@ -1016,15 +1016,7 @@ return legacyCheckoutFlow();
 
 **Referência:** Ghemawat, S., et al. (2023). Towards Modern Development of Cloud Applications. *HotOS '23*.
 
-### 8.3 Service Weaver (Google, 2023)
-
-**Contribuição:** Framework que permite escrever código monolítico e deployar como microsserviços.
-
-**Relação:** Implementação prática de modularidade com deploy flexível, validando conceitos aqui propostos.
-
-**Diferença:** Service Weaver foca em Go; este framework é agnóstico de linguagem.
-
-### 8.4 Java Modulith (Spring Ecosystem)
+### 8.3 Java Modulith (Spring Ecosystem)
 
 **Contribuição:** Modularidade no ecossistema Java Spring Boot.
 
@@ -1032,7 +1024,7 @@ return legacyCheckoutFlow();
 
 **Diferença:** Específico para Java; este trabalho generaliza para múltiplas linguagens.
 
-### 8.5 Balancing Coupling in Software Design (Khononov, 2023)
+### 8.4 Balancing Coupling in Software Design (Khononov, 2023)
 
 **Contribuição:** Análise de complexidade global vs local em sistemas distribuídos.
 
@@ -1040,7 +1032,7 @@ return legacyCheckoutFlow();
 
 **Referência:** Khononov, V. (2023). *Balancing Coupling in Software Design*. Addison-Wesley.
 
-### 8.6 Nx Documentation (Nrwl)
+### 8.5 Nx Documentation (Nrwl)
 
 **Contribuição:** Práticas e padrões de monorepo com foco em modularidade.
 
@@ -1048,7 +1040,23 @@ return legacyCheckoutFlow();
 
 **Referência:** Nrwl. (2024). *Nx Documentation*. https://nx.dev
 
-### 8.7 Diferenciação deste Trabalho
+### 8.6 NestJS (Kamil Mysliwiec)
+
+**Contribuição:** Framework Node.js com arquitetura modular inspirada em Angular, promovendo separação clara de responsabilidades via módulos, injeção de dependências e decorators.
+
+**Relação:** Exemplo prático de framework que facilita implementação de arquiteturas modulares, demonstrando como estruturas modulares podem ser implementadas de forma nativa em ecossistemas modernos.
+
+**Referência:** Mysliwiec, K. et al. (2024). *NestJS - A progressive Node.js framework*. https://nestjs.com
+
+### 8.7 Strategic Monoliths and Microservices (Vernon, 2021)
+
+**Contribuição:** Análise pragmática sobre quando e como usar monólitos versus microsserviços, enfatizando arquitetura orientada a propósito (purposeful architecture) e a importância de decisões arquiteturais alinhadas ao contexto de negócio.
+
+**Relação:** Complementa este trabalho ao reconhecer que nem todo sistema precisa de microsserviços e que monólitos bem estruturados (modulares) podem ser a escolha mais estratégica. Vernon destaca a importância de Bounded Contexts e modularidade interna, conceitos centrais em nosso framework.
+
+**Referência:** Vernon, V. (2021). *Strategic Monoliths and Microservices: Driving Innovation Using Purposeful Architecture*. Addison-Wesley Signature Series.
+
+### 8.8 Diferenciação deste Trabalho
 
 Este paper vai além ao:
 1. **Formalizar 10 princípios** como framework coeso
@@ -1142,15 +1150,19 @@ Este trabalho é uma **contribuição aberta para a comunidade**. Encorajamos:
 
 5. Nrwl. (2024). *Nx: Smart Monorepos · Fast CI*. Retrieved from https://nx.dev
 
-6. Google. (2023). *Service Weaver: A Framework for Writing Distributed Applications*. Retrieved from https://serviceweaver.dev
+6. Mysliwiec, K. et al. (2024). *NestJS: A progressive Node.js framework*. Retrieved from https://nestjs.com
 
-7. Spring. (2024). *Modulith: A Modular Monolith Toolkit for Spring Boot*. Retrieved from https://spring.io/projects/spring-modulith
+7. Google. (2023). *Service Weaver: A Framework for Writing Distributed Applications*. Retrieved from https://serviceweaver.dev
 
-8. Fowler, M. (2014). *Microservices: A Definition of This New Architectural Term*. Retrieved from https://martinfowler.com/articles/microservices.html
+8. Spring. (2024). *Modulith: A Modular Monolith Toolkit for Spring Boot*. Retrieved from https://spring.io/projects/spring-modulith
 
-9. Vernon, V. (2013). *Implementing Domain-Driven Design*. Addison-Wesley Professional.
+9. Fowler, M. (2014). *Microservices: A Definition of This New Architectural Term*. Retrieved from https://martinfowler.com/articles/microservices.html
 
-10. Richardson, C. (2018). *Microservices Patterns: With Examples in Java*. Manning Publications.
+10. Vernon, V. (2013). *Implementing Domain-Driven Design*. Addison-Wesley Professional.
+
+11. Vernon, V. (2021). *Strategic Monoliths and Microservices: Driving Innovation Using Purposeful Architecture*. Addison-Wesley Signature Series.
+
+12. Richardson, C. (2018). *Microservices Patterns: With Examples in Java*. Manning Publications.
 
 ---
 
