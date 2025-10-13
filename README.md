@@ -474,24 +474,52 @@ Definem **como módulos interagem**.
 **Justificativa:** Previne falhas em cascata, permite escalabilidade independente e facilita evolução de schemas.
 
 **Implementação:**
-```typescript
-// billing.module.ts
-@Module({
-  imports: [
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      host: process.env.BILLING_DB_HOST,
-      database: process.env.BILLING_DB_NAME,
-      entities: [SubscriptionEntity], // Apenas entidades do banco de dados locais
-      migrations: ['dist/packages/billing/migrations/*.js']
-    })
-  ]
-})
+
+```mermaid
+graph TB
+    subgraph "Módulo Billing"
+        BillingService[Billing Service]
+        BillingRepo[Billing Repository]
+    end
+    
+    subgraph "Módulo Identity"
+        IdentityService[Identity Service]
+        IdentityRepo[Identity Repository]
+    end
+    
+    subgraph "Banco de Dados"
+        subgraph "Schema/DB Billing"
+            BillingTables["Tabelas:<br/>• subscriptions<br/>• payments<br/>• invoices"]
+        end
+        
+        subgraph "Schema/DB Identity"
+            IdentityTables["Tabelas:<br/>• users<br/>• sessions<br/>• roles"]
+        end
+    end
+    
+    BillingService --> BillingRepo
+    BillingRepo --> BillingTables
+    
+    IdentityService --> IdentityRepo
+    IdentityRepo --> IdentityTables
+    
+    BillingRepo -.->|❌ Nunca acessa| IdentityTables
+    IdentityRepo -.->|❌ Nunca acessa| BillingTables
+    
+    style BillingService fill:#4A90E2
+    style IdentityService fill:#50C878
+    style BillingTables fill:#FFE5B4
+    style IdentityTables fill:#E0FFE0
+    style BillingRepo fill:#4A90E2
+    style IdentityRepo fill:#50C878
 ```
 
+**Figura: Isolamento de Estado entre Módulos**  
+*Cada módulo acessa exclusivamente suas próprias tabelas, sem compartilhamento direto de estado. A comunicação entre módulos ocorre apenas via APIs ou eventos.*
+
 **Estratégias de banco:**
-- **Banco Compartilhado**: schemas ou tabelas separadas (boa para início)
-- **Bancos Separados**: isolamento físico total (boa para maturidade)
+- **Banco Compartilhado com Schemas Separados**: schemas ou prefixos de tabelas isolados (boa para início)
+- **Bancos de Dados Completamente Separados**: isolamento físico total (boa para maturidade)
 
 #### 4.2.2 Explicit Communication (Comunicação Explícita)
 
@@ -553,7 +581,7 @@ Definem **flexibilidade de implantação**.
 
 **Justificativa:** Reduz risco de mudanças, permite ciclos de release diferenciados e facilita rollbacks.
 
-**Implementação:**
+**Implementação (Exemplo):**
 ```yaml
 # CI/CD Pipeline (exemplo GitHub Actions)
 name: Deploy Billing API
@@ -576,27 +604,6 @@ jobs:
 **Definição:** Cada app pode escalar horizontalmente conforme sua demanda específica, sem afetar outros.
 
 **Justificativa:** Otimiza uso de recursos e previne que gargalos locais impactem o sistema inteiro.
-
-**Implementação:**
-```yaml
-# Kubernetes HPA
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
-metadata:
-  name: billing-hpa
-spec:
-  scaleTargetRef:
-    kind: Deployment
-    name: billing-deployment
-  minReplicas: 2
-  maxReplicas: 10
-  metrics:
-    - type: Resource
-      resource:
-        name: cpu
-        target:
-          averageUtilization: 70
-```
 
 **Estratégia:** Métricas por app determinam escala independente.
 
@@ -994,7 +1001,6 @@ return legacyCheckoutFlow();
    - Times acostumados com polyrepo podem resistir
    - Exige mudança cultural
 
-
 ---
 
 ## 8. Trabalhos Relacionados
@@ -1241,8 +1247,7 @@ Este trabalho é uma **contribuição aberta para a comunidade**. Encorajamos:
 - LinkedIn Waldemar Neto: https://www.linkedin.com/in/waldemarnt/
 - LinkedIn William Calderipe: https://www.linkedin.com/in/wcalderipe/
 
-
-**Licença:** Este trabalho está licenciado sob Creative Commons Attribution 4.0 International (CC BY 4.0). 
+**Licença:** Este trabalho está licenciado sob Creative Commons Attribution 4.0 International (CC BY 4.0).
 
 Você é livre para:
 - ✅ Compartilhar — copiar e redistribuir o material em qualquer meio ou formato
@@ -1265,4 +1270,3 @@ Whitepaper, v1.0.
 **Versão:** 1.0  
 **Data de Publicação:** 13 de Outubro de 2025  
 **Status:** Publicação Inicial — Feedback bem-vindo
-
