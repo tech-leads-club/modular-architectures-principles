@@ -303,7 +303,7 @@ Arquiteturas Modulares são viabilizadas por ferramentas modernas:
 | **Monorepo Tools** | Gerenciamento de dependências, builds incrementais | Nx, Bazel, Turborepo |
 | **Frameworks Modulares** | Composição via módulos, injeção de dependências | NestJS, Spring Boot, .NET |
 | **Modularização Nativa** | Sistemas de módulos em linguagens | Java Modules, Go packages |
-| **Soluções Integradas** | Deploy flexível mantendo modularidade | Service Weaver, Java Modulith |
+| **Soluções Integradas** | Deploy flexível mantendo modularidade | Ktor, Maven Packages, Java Modulith |
 
 ### 3.5 Diferenciação Fundamental
 
