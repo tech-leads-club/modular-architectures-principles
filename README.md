@@ -6,8 +6,8 @@ authors:
 affiliation: TechLeads.club
 date: 2025-10-13
 version: 1.0
-license: Creative Commons BY-NC-SA 4.0
-contact: https://techleads.club
+license: CC BY 4.0
+contact: waldemarnt@gmail.com
 ---
 
 # Arquiteturas Modulares: 10 Princípios para Sistemas Escaláveis Além de Monólitos e Microsserviços
@@ -1227,18 +1227,31 @@ Este trabalho é uma **contribuição aberta para a comunidade**. Encorajamos:
 
 ## Sobre os Autores
 
-**Waldemar Neto** é cofundador da TechLeads.club e possui experiência em arquitetura de software em empresas como ThoughtWorks e startups de alto crescimento. Especialista em sistemas evolutivos e práticas de engenharia de software.
+**Waldemar Neto** é cofundador da TechLeads.club e possui experiência em arquitetura de software em empresas como ThoughtWorks e Atlassian e startups de alto crescimento. Especialista em sistemas evolutivos e práticas de engenharia de software.
+- LinkedIn: https://www.linkedin.com/in/waldemarnt/
 
 **William Calderipe** é cofundador da TechLeads.club com experiência em desenvolvimento enterprise na Atlassian e outras organizações de larga escala. Foco em arquiteturas escaláveis e práticas de DevOps.
+- LinkedIn: https://www.linkedin.com/in/wcalderipe/
 
 ---
 
 **Contato:**
 - Website: https://techleads.club
-- Email: contato@techleads.club
-- Twitter/X: @techleadsclub
+- Email: waldemarnt@gmail.com
+- LinkedIn Waldemar Neto: https://www.linkedin.com/in/waldemarnt/
+- LinkedIn William Calderipe: https://www.linkedin.com/in/wcalderipe/
 
-**Licença:** Este trabalho está licenciado sob Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
+
+**Licença:** Este trabalho está licenciado sob Creative Commons Attribution 4.0 International (CC BY 4.0). 
+
+Você é livre para:
+- ✅ Compartilhar — copiar e redistribuir o material em qualquer meio ou formato
+- ✅ Adaptar — remixar, transformar e criar a partir do material para qualquer finalidade, mesmo comercial
+
+Sob os seguintes termos:
+- 📝 Atribuição — Você deve dar crédito apropriado, fornecer um link para a licença e indicar se mudanças foram feitas
+
+Mais informações: https://creativecommons.org/licenses/by/4.0/
 
 **Como citar este trabalho:**
 ```
