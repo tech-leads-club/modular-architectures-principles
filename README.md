@@ -994,7 +994,6 @@ return legacyCheckoutFlow();
    - Times acostumados com polyrepo podem resistir
    - Exige mudança cultural
 
-**[Figura 5: Matriz de Decisão — ver diagrams-spec.md]**
 
 ---
 
