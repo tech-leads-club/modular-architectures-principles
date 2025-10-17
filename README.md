@@ -4,7 +4,7 @@ Este repositório contém a pesquisa e documentação formal sobre **Arquitetura
 
 ## 📄 Sobre o Whitepaper
 
-O whitepaper "[Arquiteturas Modulares: 10 Princípios para Sistemas Escaláveis Além de Monólitos e Microsserviços](./WHITEPAPER.md)" apresenta um framework formal baseado em **10 princípios fundamentais** para construir sistemas que evoluem de forma sustentável, evitando complexidade operacional prematura.
+O whitepaper "[Arquiteturas Modulares: 10 Princípios para Construir Sistemas Evolutivos](./WHITEPAPER.md)" apresenta um framework formal baseado em **10 princípios fundamentais** para construir sistemas que evoluem de forma sustentável, evitando complexidade operacional prematura.
 
 ### Principais Contribuições
 
@@ -73,7 +73,7 @@ Desde que:
 
 ```bibtex
 @techreport{neto2025modular,
-  title={Arquiteturas Modulares: 10 Princípios para Sistemas Escaláveis Além de Monólitos e Microsserviços},
+  title={Arquiteturas Modulares: 10 Princípios para Construir Sistemas Evolutivos},
   author={Neto, Waldemar and Calderipe, William},
   year={2025},
   institution={TechLeads.club},

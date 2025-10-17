@@ -1,5 +1,5 @@
 ---
-title: "Arquiteturas Modulares: 10 Princípios para Sistemas Escaláveis Além de Monólitos e Microsserviços"
+title: "Arquiteturas Modulares: 10 Princípios para Construir Sistemas Evolutivos"
 authors: 
   - Waldemar Neto
   - William Calderipe
@@ -10,7 +10,7 @@ license: CC BY 4.0
 contact: waldemarnt@gmail.com
 ---
 
-# Arquiteturas Modulares: 10 Princípios para Sistemas Escaláveis Além de Monólitos e Microsserviços
+# Arquiteturas Modulares: 10 Princípios para Construir Sistemas Evolutivos
 
 **Waldemar Neto¹, William Calderipe¹**
 
@@ -1261,8 +1261,7 @@ Mais informações: https://creativecommons.org/licenses/by/4.0/
 **Como citar este trabalho:**
 ```
 Neto, W., & Calderipe, W. (2025). Arquiteturas Modulares: 10 Princípios para 
-Sistemas Escaláveis Além de Monólitos e Microsserviços. TechLeads.club 
-Whitepaper, v1.0.
+Construir Sistemas Evolutivos. TechLeads.club Whitepaper, v1.0.
 ```
 
 ---
