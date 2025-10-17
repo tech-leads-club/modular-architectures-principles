@@ -1,3 +1,8 @@
+---
+permalink: /whitepaper/
+title: Whitepaper
+---
+
 # Arquiteturas Modulares
 
 Este repositório contém a pesquisa e documentação formal sobre **Arquiteturas Modulares**, um framework arquitetural que oferece uma alternativa pragmática entre monólitos tradicionais e microsserviços.
