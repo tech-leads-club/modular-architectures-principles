@@ -2,13 +2,18 @@
 title: "Arquiteturas Modulares"
 description: "10 Princípios para Construir Sistemas Evolutivos"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site
+url: "https://modular-architectures.com" # your actual domain
 
 # Theme - Cayman provides clean, professional styling ideal for whitepapers
-layout: jekyll-theme-cayman
+theme: jekyll-theme-cayman
 
+# Markdown settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
+# Plugins (only GitHub Pages approved plugins)
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-mermaid
