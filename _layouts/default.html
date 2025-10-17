@@ -38,6 +38,32 @@
         // Manually render all mermaid elements
         mermaid.run();
       });
+      
+      // Auto-convert bare URLs to clickable links (fallback)
+      document.addEventListener('DOMContentLoaded', function() {
+        const urlPattern = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
+        
+        function linkifyNode(node) {
+          if (node.nodeType === 3) { // Text node
+            const text = node.textContent;
+            if (urlPattern.test(text)) {
+              const span = document.createElement('span');
+              span.innerHTML = text.replace(urlPattern, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+              node.parentNode.replaceChild(span, node);
+            }
+          } else if (node.nodeType === 1 && node.nodeName !== 'A' && node.nodeName !== 'SCRIPT' && node.nodeName !== 'STYLE') {
+            for (let i = 0; i < node.childNodes.length; i++) {
+              linkifyNode(node.childNodes[i]);
+            }
+          }
+        }
+        
+        // Apply to main content
+        const mainContent = document.querySelector('.main-content');
+        if (mainContent) {
+          linkifyNode(mainContent);
+        }
+      });
     </script>
     
     <!-- Custom styles for whitepaper -->
@@ -47,6 +73,24 @@
         max-width: 900px;
         font-size: 16px;
         line-height: 1.7;
+      }
+      
+      /* Links styling - make them obviously clickable */
+      .main-content a {
+        color: #0366d6;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s ease;
+      }
+      
+      .main-content a:hover {
+        color: #0366d6;
+        border-bottom: 1px solid #0366d6;
+        text-decoration: none;
+      }
+      
+      .main-content a:visited {
+        color: #6f42c1;
       }
       
       .main-content h1 {
