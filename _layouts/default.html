@@ -11,11 +11,32 @@
     <!-- Mermaid JS for diagrams - CDN approach (GitHub Pages compatible) -->
     <script type="module">
       import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-      mermaid.initialize({ 
-        startOnLoad: true,
-        theme: 'default',
-        securityLevel: 'loose',
-        fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+      
+      // Convert markdown code blocks to mermaid divs
+      document.addEventListener('DOMContentLoaded', function() {
+        // Find all code blocks with language-mermaid class
+        const mermaidBlocks = document.querySelectorAll('pre code.language-mermaid');
+        
+        mermaidBlocks.forEach((block) => {
+          // Create a new div with mermaid class
+          const mermaidDiv = document.createElement('div');
+          mermaidDiv.className = 'mermaid';
+          mermaidDiv.textContent = block.textContent;
+          
+          // Replace the pre/code structure with the div
+          block.parentElement.replaceWith(mermaidDiv);
+        });
+        
+        // Initialize Mermaid after conversion
+        mermaid.initialize({ 
+          startOnLoad: true,
+          theme: 'default',
+          securityLevel: 'loose',
+          fontFamily: 'system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
+        });
+        
+        // Manually render all mermaid elements
+        mermaid.run();
       });
     </script>
     
