@@ -152,7 +152,7 @@ Segundo Ghemawat et al. (2023), o erro dos microsserviços está em **conflitar 
 ### 2.5 Tabela Comparativa: Granularidade
 
 | **Critério** | **Grossa (Monólito)** | **Média (Modular)** | **Fina (Microsserviços)** |
-|---|---|---|---|
+|---|---|---|
 | **Complexidade Operacional** | Baixa | Média | Alta |
 | **Velocidade Inicial** | Alta | Alta | Baixa |
 | **Escalabilidade** | Limitada | Flexível | Máxima |
@@ -160,6 +160,7 @@ Segundo Ghemawat et al. (2023), o erro dos microsserviços está em **conflitar 
 | **Deploy** | Único | Por app | Por serviço |
 | **Acoplamento** | Alto | Controlado | Distribuído |
 | **Governança Necessária** | Baixa | Média | Alta |
+
 ```mermaid
 graph LR
     A[Monólito<br/>Complexidade<br/>Média] --> B[Modular<br/>Complexidade<br/>Mínima]
