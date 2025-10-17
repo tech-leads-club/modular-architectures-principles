@@ -1,6 +1,7 @@
 ---
 permalink: /whitepaper/
 title: Whitepaper
+layout: default
 ---
 
 # Arquiteturas Modulares
