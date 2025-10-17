@@ -4,8 +4,7 @@ description: "10 Princípios para Construir Sistemas Evolutivos"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://modular-architectures.com" # your actual domain
 
-# Theme - Cayman provides clean, professional styling ideal for whitepapers
-theme: jekyll-theme-cayman
+# No theme - using custom minimal layout
 
 # Markdown settings
 markdown: kramdown

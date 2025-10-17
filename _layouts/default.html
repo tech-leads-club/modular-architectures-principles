@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
 {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     
     <!-- Mermaid JS for diagrams - CDN approach (GitHub Pages compatible) -->
     <script type="module">
@@ -66,16 +66,94 @@
       });
     </script>
     
-    <!-- Custom styles for whitepaper -->
+    <!-- Minimal, clean styles for whitepaper -->
     <style>
-      /* Better typography for academic papers */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        line-height: 1.6;
+        color: #24292e;
+        background: #ffffff;
+      }
+      
+      /* Simple header */
+      .site-header {
+        background: #f6f8fa;
+        border-bottom: 1px solid #e1e4e8;
+        padding: 1.5rem 0;
+        margin-bottom: 2rem;
+      }
+      
+      .site-header .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .site-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #24292e;
+        margin: 0;
+      }
+      
+      .site-description {
+        font-size: 1rem;
+        color: #586069;
+        margin: 0.25rem 0 0 0;
+      }
+      
+      /* Main content */
       .main-content {
         max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px 3rem 20px;
         font-size: 16px;
         line-height: 1.7;
       }
       
-      /* Links styling - make them obviously clickable */
+      /* Typography */
+      .main-content h1 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #159957;
+        padding-bottom: 0.5rem;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+      
+      .main-content h2 {
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+        color: #159957;
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      
+      .main-content h3 {
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+      }
+      
+      .main-content h4 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+      
+      .main-content p {
+        margin: 1rem 0;
+      }
+      
+      /* Links - make them obviously clickable */
       .main-content a {
         color: #0366d6;
         text-decoration: none;
@@ -86,29 +164,10 @@
       .main-content a:hover {
         color: #0366d6;
         border-bottom: 1px solid #0366d6;
-        text-decoration: none;
       }
       
       .main-content a:visited {
         color: #6f42c1;
-      }
-      
-      .main-content h1 {
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        border-bottom: 2px solid #159957;
-        padding-bottom: 0.5rem;
-      }
-      
-      .main-content h2 {
-        margin-top: 2.5rem;
-        margin-bottom: 1rem;
-        color: #159957;
-      }
-      
-      .main-content h3 {
-        margin-top: 2rem;
-        margin-bottom: 0.75rem;
       }
       
       /* Code blocks */
@@ -206,27 +265,27 @@
     </style>
   </head>
   <body>
-    <a id="skip-to-content" href="#content">Skip to the content.</a>
-
-    <header class="page-header" role="banner">
-      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      {% if site.github.is_project_page %}
-        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
-      {% endif %}
+    <!-- Simple minimal header -->
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">{{ page.title | default: site.title }}</h1>
+        <p class="site-description">{{ page.description | default: site.description }}</p>
+      </div>
     </header>
 
-    <main id="content" class="main-content" role="main">
+    <!-- Main content -->
+    <main class="main-content">
       {{ content }}
-
-      <footer class="site-footer">
-        {% if site.github.is_project_page %}
-          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
-        {% endif %}
-        <span class="site-footer-credits">
+      
+      <!-- Simple footer -->
+      <footer style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e1e4e8; color: #586069; font-size: 0.9rem;">
+        <p>
           Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> | 
           Published by <a href="https://techleads.club">TechLeads.club</a>
-        </span>
+          {% if site.github.is_project_page %}
+          | <a href="{{ site.github.repository_url }}">GitHub</a>
+          {% endif %}
+        </p>
       </footer>
     </main>
   </body>
