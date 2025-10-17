@@ -212,26 +212,33 @@
       
       /* Tables */
       .main-content table {
+        display: table;
         width: 100%;
         margin: 1.5rem 0;
         border-collapse: collapse;
         font-size: 14px;
+        overflow-x: auto;
       }
       
       .main-content table th,
       .main-content table td {
         padding: 12px 15px;
         border: 1px solid #d1d5da;
+        text-align: left;
       }
       
       .main-content table th {
-        background-color: #159957;
+        background-color: #0366d6;
         color: white;
         font-weight: 600;
       }
       
       .main-content table tr:nth-child(even) {
         background-color: #f6f8fa;
+      }
+      
+      .main-content table tr:hover {
+        background-color: #f1f8ff;
       }
       
       /* Mermaid diagrams */
