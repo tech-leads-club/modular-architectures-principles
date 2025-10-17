@@ -31,7 +31,9 @@ Isso permite que sistemas evoluam gradualmente conforme maturidade organizaciona
 
 ## 📖 Leia o Whitepaper Completo
 
-**[→ Acesse o Whitepaper Completo (WHITEPAPER.md)](./WHITEPAPER.md)**
+**[→ Acesse o Whitepaper Online](https://modular-architectures.com/whitepaper.html)** (recomendado - com diagramas interativos)
+
+**[→ Versão Markdown (WHITEPAPER.md)](./whitepaper.md)** (para leitura no GitHub)
 
 ### Índice do Whitepaper
 
@@ -81,6 +83,12 @@ Desde que:
   version={1.0}
 }
 ```
+
+## 🚀 Deploy do Site
+
+Este repositório está configurado para GitHub Pages com Jekyll.
+
+**[→ Ver Instruções de Setup](./SETUP.md)**
 
 ## 🤝 Contribuições
 

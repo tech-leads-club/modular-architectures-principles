@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta http-equiv="refresh" content="0; url='/whitepaper.html'" />
-  </head>
-  <body>
-    <p>Redirecionando para o <a href="/whitepaper.html">whitepaper</a>...</p>
-  </body>
-</html>
+---
+layout: default
+title: "Arquiteturas Modulares"
+description: "10 Princípios para Construir Sistemas Evolutivos"
+---
+
+<script>
+  window.location.href = "{{ site.baseurl }}/whitepaper.html";
+</script>
+
+<noscript>
+  <meta http-equiv="refresh" content="0; url={{ site.baseurl }}/whitepaper.html" />
+  <p>Redirecionando para o <a href="{{ site.baseurl }}/whitepaper.html">whitepaper</a>...</p>
+</noscript>
