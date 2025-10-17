@@ -108,6 +108,22 @@
         margin: 0.25rem 0 0 0;
       }
       
+      .github-link {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+      }
+      
+      .github-link a {
+        color: #0366d6;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        transition: all 0.2s ease;
+      }
+      
+      .github-link a:hover {
+        border-bottom: 1px solid #0366d6;
+      }
+      
       /* Main content */
       .main-content {
         max-width: 900px;
@@ -121,7 +137,7 @@
       .main-content h1 {
         margin-top: 2rem;
         margin-bottom: 1rem;
-        border-bottom: 2px solid #159957;
+        border-bottom: 2px solid #0366d6;
         padding-bottom: 0.5rem;
         font-size: 2rem;
         font-weight: 600;
@@ -130,7 +146,7 @@
       .main-content h2 {
         margin-top: 2.5rem;
         margin-bottom: 1rem;
-        color: #159957;
+        color: #0366d6;
         font-size: 1.5rem;
         font-weight: 600;
       }
@@ -270,6 +286,11 @@
       <div class="container">
         <h1 class="site-title">{{ page.title | default: site.title }}</h1>
         <p class="site-description">{{ page.description | default: site.description }}</p>
+        {% if site.github.is_project_page %}
+        <p class="github-link">
+          <a href="{{ site.github.repository_url }}">📝 Contribute to the whitepaper on GitHub</a>
+        </p>
+        {% endif %}
       </div>
     </header>
 
