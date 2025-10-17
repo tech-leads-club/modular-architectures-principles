@@ -1,5 +1,7 @@
 ---
+layout: default
 title: "Arquiteturas Modulares: 10 Princípios para Construir Sistemas Evolutivos"
+description: "Um framework formal para construir sistemas que evoluem de forma sustentável"
 authors: 
   - Waldemar Neto
   - William Calderipe
