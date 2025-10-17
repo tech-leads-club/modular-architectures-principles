@@ -4,7 +4,7 @@ Este repositório contém a pesquisa e documentação formal sobre **Arquitetura
 
 ## 📄 Sobre o Whitepaper
 
-O whitepaper "[Arquiteturas Modulares: 10 Princípios para Construir Sistemas Evolutivos](./WHITEPAPER.md)" apresenta um framework formal baseado em **10 princípios fundamentais** para construir sistemas que evoluem de forma sustentável, evitando complexidade operacional prematura.
+O whitepaper "[Arquiteturas Modulares: 10 Princípios para Construir Sistemas Evolutivos](./whitepaper-pt.md)" apresenta um framework formal baseado em **10 princípios fundamentais** para construir sistemas que evoluem de forma sustentável, evitando complexidade operacional prematura.
 
 ### Principais Contribuições
 
@@ -33,7 +33,7 @@ Isso permite que sistemas evoluam gradualmente conforme maturidade organizaciona
 
 **[→ Acesse o Whitepaper Online](https://modular-architectures.com/whitepaper.html)** (recomendado - com diagramas interativos)
 
-**[→ Versão Markdown (WHITEPAPER.md)](./whitepaper.md)** (para leitura no GitHub)
+**[→ Versão Markdown (WHITEPAPER.md)](./whitepaper-pt.md)** (para leitura no GitHub)
 
 ### Índice do Whitepaper
 
